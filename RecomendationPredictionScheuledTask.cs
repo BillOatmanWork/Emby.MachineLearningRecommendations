@@ -34,27 +34,6 @@ namespace ML_Recommendations
             Log = logMan.GetLogger(Plugin.Instance.Name);
             AppPaths = appPaths;
             Dto = dto;
-            //if (!File.Exists($"{AppDomain.CurrentDomain.BaseDirectory}Microsoft.ML.dll"))
-            //{
-            //    Log.Info($"Saving ML to: {AppDomain.CurrentDomain.BaseDirectory}");
-            //    var r2 = Assembly.GetExecutingAssembly().GetManifestResourceNames().FirstOrDefault(s => s.Contains("Microsoft.ML.Context"));
-            //    Log.Info($"RESOURCE FOUND IS: {r2}");
-            //    WriteResourceToFile(r2, $"{AppDomain.CurrentDomain.BaseDirectory}Microsoft.ML.dll");
-            //}
-            //if (!File.Exists($"{AppDomain.CurrentDomain.BaseDirectory}Microsoft.ML.Coredll"))
-            //{
-            //    Log.Info($"Saving ML to: {AppDomain.CurrentDomain.BaseDirectory}");
-            //    var r2 = Assembly.GetExecutingAssembly().GetManifestResourceNames().FirstOrDefault(s => s.Contains("Microsoft.ML.Core"));
-            //    Log.Info($"RESOURCE FOUND IS: {r2}");
-            //    WriteResourceToFile(r2, $"{AppDomain.CurrentDomain.BaseDirectory}Microsoft.ML.Core.dll");
-            //}
-            //if (!File.Exists($"{AppDomain.CurrentDomain.BaseDirectory}Microsoft.ML.Data.dll"))
-            //{
-            //    Log.Info($"Saving ML to: {AppDomain.CurrentDomain.BaseDirectory}");
-            //    var r2 = Assembly.GetExecutingAssembly().GetManifestResourceNames().FirstOrDefault(s => s.Contains("Microsoft.ML.Data"));
-            //    Log.Info($"RESOURCE FOUND IS: {r2}");
-            //    WriteResourceToFile(r2, $"{AppDomain.CurrentDomain.BaseDirectory}Microsoft.ML.Data.dll");
-            //}
             
             AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
         }
