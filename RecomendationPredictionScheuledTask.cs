@@ -35,6 +35,7 @@ namespace ML_Recommendations
             AppPaths = appPaths;
             Dto = dto;
             
+            //This event will fire when the plugin needs to load Microsoft.ML libraries, which Emby doesn't ship with
             AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
         }
 
