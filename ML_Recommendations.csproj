@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup> <TargetFrameworks>netstandard2.0;</TargetFrameworks> <AssemblyVersion>1.0.0.0</AssemblyVersion> <FileVersion>1.0.0.0</FileVersion> <Version>1.0.0.0</Version> </PropertyGroup>
+
+<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+  <CodeAnalysisRuleSet />
+</PropertyGroup>
+
+<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+  <CodeAnalysisRuleSet />
+</PropertyGroup>
+
+<ItemGroup>
+  <None Remove="ML\Microsoft.MachineLearning.dll" />
+</ItemGroup>
+
+
+
+<ItemGroup>
+  <EmbeddedResource Include="Configuration\TensorflowRecommendationsConfigurationPage.html" />
+  <EmbeddedResource Include="Configuration\TensorflowRecommendationsConfigurationPage.js" />
+  <EmbeddedResource Include="ML\Microsoft.ML.Core.dll" />
+  <EmbeddedResource Include="ML\Microsoft.ML.Data.dll" />
+  <EmbeddedResource Include="ML\Microsoft.ML.DataView.dll" />
+  <EmbeddedResource Include="ML\Microsoft.MachineLearning.dll" />
+  <EmbeddedResource Include="ML\Microsoft.ML.KMeansClustering.dll" />
+  <EmbeddedResource Include="ML\Microsoft.ML.PCA.dll" />
+  <EmbeddedResource Include="ML\Microsoft.ML.Recommender.dll" />
+  <EmbeddedResource Include="ML\Microsoft.ML.StandardTrainers.dll" />
+  <EmbeddedResource Include="ML\Microsoft.ML.Transforms.dll" />
+</ItemGroup>
+
+
+<ItemGroup> <PackageReference Include="mediabrowser.server.core" Version="4.6.0.50" /> <PackageReference Include="Microsoft.ML" Version="1.7.0" /> <PackageReference Include="Microsoft.ML.Recommender" Version="0.19.0" /> <PackageReference Include="System.Memory" Version="4.5.4" /></ItemGroup>
+
+</Project>
